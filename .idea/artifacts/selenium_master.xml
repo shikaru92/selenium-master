@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="selenium-master">
+    <output-path>$PROJECT_DIR$/out/artifacts/selenium_master</output-path>
+    <root id="archive" name="selenium-master.war" />
+  </artifact>
+</component>

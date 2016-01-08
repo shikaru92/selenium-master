@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="15148" started-at="2016-01-08T04:12:03Z" finished-at="2016-01-08T04:12:18Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="15148" started-at="2016-01-08T04:12:03Z" finished-at="2016-01-08T04:12:18Z">
+      <class name="com.mastering.selenium.BasicTestWD">
+        <test-method status="PASS" signature="instantiateDriverObject()[pri:0, instance:com.mastering.selenium.BasicTestWD@27f674d]" name="instantiateDriverObject" is-config="true" duration-ms="8" started-at="2016-01-08T11:12:03Z" finished-at="2016-01-08T11:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiateDriverObject -->
+        <test-method status="PASS" signature="googleCheeseExample()[pri:0, instance:com.mastering.selenium.BasicTestWD@27f674d]" name="googleCheeseExample" duration-ms="14962" started-at="2016-01-08T11:12:03Z" finished-at="2016-01-08T11:12:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleCheeseExample -->
+        <test-method status="PASS" signature="googleMilkExample()[pri:0, instance:com.mastering.selenium.BasicTestWD@27f674d]" name="googleMilkExample" duration-ms="14983" started-at="2016-01-08T11:12:03Z" finished-at="2016-01-08T11:12:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleMilkExample -->
+        <test-method status="PASS" signature="clearCookies()[pri:0, instance:com.mastering.selenium.BasicTestWD@27f674d]" name="clearCookies" is-config="true" duration-ms="136" started-at="2016-01-08T11:12:18Z" finished-at="2016-01-08T11:12:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCookies -->
+        <test-method status="PASS" signature="clearCookies()[pri:0, instance:com.mastering.selenium.BasicTestWD@27f674d]" name="clearCookies" is-config="true" duration-ms="136" started-at="2016-01-08T11:12:18Z" finished-at="2016-01-08T11:12:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCookies -->
+        <test-method status="PASS" signature="closeDriverObject()[pri:0, instance:com.mastering.selenium.BasicTestWD@27f674d]" name="closeDriverObject" is-config="true" duration-ms="3176" started-at="2016-01-08T11:12:19Z" finished-at="2016-01-08T11:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriverObject -->
+      </class> <!-- com.mastering.selenium.BasicTestWD -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
