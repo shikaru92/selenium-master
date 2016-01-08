@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 public class BasicTestWD extends DriverFactory{
     private void googleExample(final String searchString)
     {
+        //add comment
         final WebDriver driver = DriverFactory.getDriver();
         driver.get("http://google.com");
         WebElement searchField = driver.findElement(By.name("q"));
