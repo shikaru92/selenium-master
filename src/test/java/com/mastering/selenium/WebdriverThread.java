@@ -1,8 +1,13 @@
 package com.mastering.selenium;
 
 import com.mastering.selenium.config.DriverType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Created by tcbinh on 1/7/2016.
@@ -16,9 +21,9 @@ public class WebdriverThread {
     private final String operatingSystem = System.getProperty("os.name").toUpperCase();
     private final String systemArchitecture = System.getProperty("os.arch");
     private final String browser = System.getProperty("browser").toUpperCase();
+    private final boolean useRemoteWebdriver = Boolean.getBoolean("remoteDriver");
 
-    public WebDriver getDriver()
-    {
+    public WebDriver getDriver() throws MalformedURLException {
         if (null == driver) {
             selectedDriverType = determineEffectiveDriverType();
             DesiredCapabilities desiredCapabilities = selectedDriverType.getDesiredCapabilities();
@@ -49,14 +54,33 @@ public class WebdriverThread {
         return driverType;
     }
 
-    private void instantiateWebDriver(DesiredCapabilities desiredCapabilities)
-    {
+    private void instantiateWebDriver(DesiredCapabilities desiredCapabilities) throws MalformedURLException {
         System.out.println(" ");
         System.out.println("Current Operating System: " + operatingSystem);
         System.out.println("Current Architecture: " + systemArchitecture);
         System.out.println("Current Browser Selection: " + selectedDriverType);
         System.out.println(" ");
-        driver = selectedDriverType.getWebDriverObject(desiredCapabilities);
+
+        if (useRemoteWebdriver)
+        {
+            URL seleniumGridURL = new URL(System.getProperty("gridURL"));
+            String desiredBrowserVersion = System.getProperty("desiredBrowserVersion");
+            String desiredPlatform = System.getProperty("desiredPlatform");
+
+            if (null != desiredPlatform && !desiredPlatform.isEmpty())
+            {
+                desiredCapabilities.setPlatform(Platform.valueOf(desiredPlatform.toUpperCase()));
+            }
+            if (null != desiredBrowserVersion && !desiredBrowserVersion.isEmpty())
+            {
+                desiredCapabilities.setVersion(desiredBrowserVersion);
+            }
+            driver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities);
+        }
+        else
+        {
+            driver = selectedDriverType.getWebDriverObject(desiredCapabilities);
+        }
     }
 
 }

@@ -7,12 +7,13 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+
 /**
  * Created by tcbinh on 1/7/2016.
  */
 public class BasicTestWD extends DriverFactory{
-    private void googleExample(final String searchString)
-    {
+    private void googleExample(final String searchString) throws MalformedURLException {
         //add comment bbb
         final WebDriver driver = DriverFactory.getDriver();
         driver.get("http://google.com");
@@ -31,14 +32,12 @@ public class BasicTestWD extends DriverFactory{
     }
 
     @Test
-    public void googleCheeseExample()
-    {
+    public void googleCheeseExample() throws MalformedURLException {
         googleExample("Cheese!");
     }
 
     @Test
-    public void googleMilkExample()
-    {
+    public void googleMilkExample() throws MalformedURLException {
         googleExample("Milk!");
     }
 }

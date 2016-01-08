@@ -11,6 +11,10 @@
     <properties>
         <threads>1</threads>
         <browser>firefox</browser>
+        <remote>false</remote>
+        <seleniumGridURL/>
+        <platform/>
+        <browserVersion/>
     </properties>
 
     <build>
@@ -24,6 +28,10 @@
                     <threadCount>${threads}</threadCount>
                     <systemProperties>
                         <browser>${browser}</browser>
+                        <remoteDriver>${remote}</remoteDriver>
+                        <gridURL>${seleniumGridURL}</gridURL>
+                        <desiredPlatform>${platform}</desiredPlatform>
+                        <desiredBrowserVersion>${browserVersion}</desiredBrowserVersion>
                     </systemProperties>
                     <includes>
                         <include>**/*WD.java</include>
