@@ -20,7 +20,7 @@ public class WebdriverThread {
 
     private final String operatingSystem = System.getProperty("os.name").toUpperCase();
     private final String systemArchitecture = System.getProperty("os.arch");
-    private final String browser = System.getProperty("browser").toUpperCase();
+    private final String browser = System.getProperty("browser");
     private final boolean useRemoteWebdriver = Boolean.getBoolean("remoteDriver");
 
     public WebDriver getDriver() throws MalformedURLException {
