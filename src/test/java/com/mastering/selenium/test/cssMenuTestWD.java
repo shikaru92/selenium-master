@@ -1,4 +1,4 @@
-package com.mastering.selenium;
+package com.mastering.selenium.test;
 
 import java.net.MalformedURLException;
 
@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
+import com.mastering.selenium.DriverFactory;
 
 public class cssMenuTestWD extends DriverFactory{
 	

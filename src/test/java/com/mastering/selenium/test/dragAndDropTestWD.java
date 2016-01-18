@@ -1,4 +1,4 @@
-package com.mastering.selenium;
+package com.mastering.selenium.test;
 
 import java.net.MalformedURLException;
 
@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.mastering.selenium.DriverFactory;
 
 public class dragAndDropTestWD extends DriverFactory{
 	

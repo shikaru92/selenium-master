@@ -1,14 +1,15 @@
-package com.mastering.selenium;
+package com.mastering.selenium.test;
+
+import java.net.MalformedURLException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
+import com.mastering.selenium.DriverFactory;
 
 /**
  * Created by tcbinh on 1/7/2016.
