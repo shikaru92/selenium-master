@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -14,7 +15,7 @@ import java.net.MalformedURLException;
  */
 public class BasicTestWD extends DriverFactory{
     private void googleExample(final String searchString) throws MalformedURLException {
-        //add comment testing
+        //add comment bbb
         final WebDriver driver = DriverFactory.getDriver();
         driver.get("http://google.com");
         WebElement searchField = driver.findElement(By.name("q"));
@@ -29,6 +30,7 @@ public class BasicTestWD extends DriverFactory{
             }
         });
         System.out.println("Page title is: " + driver.getTitle());
+        Assert.assertFalse(driver.getTitle().contains(searchString));
     }
 
     @Test

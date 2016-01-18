@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+
+import com.mastering.selenium.listener.ScreenshotListener;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -13,6 +16,7 @@ import java.util.List;
 /**
  * Created by tcbinh on 1/7/2016.
  */
+@Listeners(ScreenshotListener.class)
 public class DriverFactory {
 
     private static List<WebdriverThread> webdriverThreadPool = Collections.synchronizedList(new ArrayList<WebdriverThread>());
