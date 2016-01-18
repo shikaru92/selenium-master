@@ -14,7 +14,7 @@ import java.net.MalformedURLException;
  */
 public class BasicTestWD extends DriverFactory{
     private void googleExample(final String searchString) throws MalformedURLException {
-        //add comment bbb
+        //add comment testing
         final WebDriver driver = DriverFactory.getDriver();
         driver.get("http://google.com");
         WebElement searchField = driver.findElement(By.name("q"));
