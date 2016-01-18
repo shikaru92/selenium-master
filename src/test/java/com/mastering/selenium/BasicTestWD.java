@@ -30,7 +30,6 @@ public class BasicTestWD extends DriverFactory{
             }
         });
         System.out.println("Page title is: " + driver.getTitle());
-        Assert.assertFalse(driver.getTitle().contains(searchString));
     }
 
     @Test
