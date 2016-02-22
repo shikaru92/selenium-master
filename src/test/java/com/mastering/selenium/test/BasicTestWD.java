@@ -1,5 +1,8 @@
-package com.mastering.selenium;
+package com.mastering.selenium.test;
 
+import java.net.MalformedURLException;
+
+import com.mastering.selenium.pageobject.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
+import com.mastering.selenium.DriverFactory;
 
 /**
  * Created by tcbinh on 1/7/2016.
@@ -39,5 +42,19 @@ public class BasicTestWD extends DriverFactory{
     @Test
     public void googleMilkExample() throws MalformedURLException {
         googleExample("Milk!");
+    }
+
+
+    public void testLoginGmail() throws Exception {
+        DriverFactory.getDriver().get("http://gmail.com");
+        LoginPage loginPage = new LoginPage();
+        loginPage.enterEmail("thienlong1234@gmail.com")
+                .clickNext()
+                .enterPassword("solutionpro10101992")
+                .clickSignIn();
+
+
+//        loginPage.loginWithUsernameAndPassword("thienlong1234@gmail.com","solutionpro10101992");
+
     }
 }
