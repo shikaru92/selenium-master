@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
  * Created by tcbinh on 1/18/2016.
  */
 public class DragAndDropTestWD extends DriverFactory{
-    @Test
+    @Test(enabled = false)
     public void automateJavaScriptDragAndDropWithOffsetsStep5() throws Exception {
         WebDriver driver = getDriver();
 

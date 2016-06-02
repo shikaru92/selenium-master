@@ -19,7 +19,7 @@ import java.util.*;
  */
 public class IframeTestWD extends DriverFactory {
 
-    @Test
+    @Test(enabled = false)
     public void getSourceOfIFrame() throws MalformedURLException, FileNotFoundException {
         WebDriver driver = getDriver();
 

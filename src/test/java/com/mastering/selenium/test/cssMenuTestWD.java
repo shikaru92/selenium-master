@@ -14,7 +14,7 @@ import com.mastering.selenium.DriverFactory;
 
 public class cssMenuTestWD extends DriverFactory{
 	
-	@Test
+	@Test(enabled = false)
 	public void automateCSSMenu() throws MalformedURLException
 	{
 		WebDriver driver = getDriver();

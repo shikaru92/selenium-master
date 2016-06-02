@@ -13,7 +13,7 @@ import com.mastering.selenium.DriverFactory;
 
 public class dragAndDropTestWD extends DriverFactory{
 	
-	@Test
+	@Test(enabled = false)
 	public void dragAndDropTest() throws MalformedURLException
 	{
 		WebDriver driver = DriverFactory.getDriver();
