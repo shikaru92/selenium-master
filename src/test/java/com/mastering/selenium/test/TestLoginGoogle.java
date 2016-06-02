@@ -39,7 +39,7 @@ public class TestLoginGoogle extends DriverFactory{
                 .clickSignIn();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testLoginGmail2() throws Exception {
         loginPage.enterEmail("").clickNext();
         WebDriverWait wait = new WebDriverWait(driver,10);
@@ -47,7 +47,7 @@ public class TestLoginGoogle extends DriverFactory{
         Assert.assertTrue(loginPage.getErrorMessageEmail().isDisplayed());
     }
 
-    @Test
+    @Test(enabled = false)
     public void testLoginGmail3() throws Exception {
         loginPage.enterEmail("thienlong1234@gmail.com")
                 .clickNext()
@@ -58,7 +58,7 @@ public class TestLoginGoogle extends DriverFactory{
         Assert.assertTrue(loginPage.getErrorMessagePassword().isDisplayed());
     }
 
-    @Test
+    @Test(enabled = false)
     public void testClickEmailTitle() throws Exception
     {
         loginPage.enterEmail("thienlong1234@gmail.com")
