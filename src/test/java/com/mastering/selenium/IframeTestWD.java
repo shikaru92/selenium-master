@@ -52,7 +52,7 @@ public class IframeTestWD extends DriverFactory {
         printWriter.close();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testHTML5() throws MalformedURLException {
         WebDriver driver = new FirefoxDriver();
         driver.get("http://dev.goplay.la/account/register");

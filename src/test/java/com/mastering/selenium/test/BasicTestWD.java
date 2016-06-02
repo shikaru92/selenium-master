@@ -43,18 +43,4 @@ public class BasicTestWD extends DriverFactory{
     public void googleMilkExample() throws MalformedURLException {
         googleExample("Milk!");
     }
-
-
-    public void testLoginGmail() throws Exception {
-        DriverFactory.getDriver().get("http://gmail.com");
-        LoginPage loginPage = new LoginPage();
-        loginPage.enterEmail("thienlong1234@gmail.com")
-                .clickNext()
-                .enterPassword("solutionpro10101992")
-                .clickSignIn();
-
-
-//        loginPage.loginWithUsernameAndPassword("thienlong1234@gmail.com","solutionpro10101992");
-
-    }
 }
