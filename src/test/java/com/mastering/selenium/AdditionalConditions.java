@@ -1,11 +1,8 @@
 package com.mastering.selenium;
 
-import net.sourceforge.htmlunit.corejs.javascript.JavaScriptException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * Created by tcbinh on 1/12/2016.
