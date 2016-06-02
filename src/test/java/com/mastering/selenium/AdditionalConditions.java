@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
 /**
- * Created by tcbinh on 1/12/2016. 1
+ * Created by tcbinh on 1/12/2016.
  */
 public class AdditionalConditions {
     public static ExpectedCondition<Boolean> jQueryAJAXCallsHaveCompleted()
