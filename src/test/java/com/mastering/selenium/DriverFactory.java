@@ -22,7 +22,7 @@ public class DriverFactory {
     private static List<WebdriverThread> webdriverThreadPool = Collections.synchronizedList(new ArrayList<WebdriverThread>());
     private static ThreadLocal<WebdriverThread> driverThread;
 
-    @BeforeSuite
+    @BeforeSuite(groups={"google","test_group"})
     public static void instantiateDriverObject()
     {
         driverThread = new ThreadLocal<WebdriverThread>(){
@@ -40,12 +40,12 @@ public class DriverFactory {
         return driverThread.get().getDriver();
     }
 
-    @AfterMethod
+    @AfterMethod(groups={"google","test_group"})
     public static void clearCookies() throws MalformedURLException {
         getDriver().manage().deleteAllCookies();
     }
 
-    @AfterSuite
+    @AfterSuite(groups={"google","test_group"})
     public static void closeDriverObject()
     {
         for (WebdriverThread webdriverThread : webdriverThreadPool)

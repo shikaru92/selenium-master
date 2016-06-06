@@ -34,12 +34,12 @@ public class BasicTestWD extends DriverFactory{
         System.out.println("Page title is: " + driver.getTitle());
     }
 
-    @Test
+    @Test(groups={"test_group"})
     public void googleCheeseExample() throws MalformedURLException {
         googleExample("Cheese!");
     }
 
-    @Test
+    @Test(groups={"test_group"})
     public void googleMilkExample() throws MalformedURLException {
         googleExample("Milk!");
     }

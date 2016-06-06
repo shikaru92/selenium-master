@@ -21,7 +21,7 @@ public class TestLoginGoogle extends DriverFactory{
     private InboxPage inboxPage;
     private WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(groups={"google"})
     public void init() throws Exception {
         driver = DriverFactory.getDriver();
         driver.get("http://gmail.com");
@@ -29,7 +29,7 @@ public class TestLoginGoogle extends DriverFactory{
         inboxPage = new InboxPage();
     }
 
-    @Test
+    @Test(groups={"google"})
     public void testLoginGmail() throws Exception {
         loginPage.enterEmail("thienlong1234@gmail.com")
                 .clickNext()
